@@ -11,3 +11,8 @@
   to = "/.netlify/images/?w=50&url=:splat"
   status = 200
 
+
+[[redirects]]
+  from = "/image/tiny/*"
+  to = "/public/images/:splat"
+  status = 404
