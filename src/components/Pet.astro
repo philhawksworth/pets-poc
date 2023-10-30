@@ -1,0 +1,47 @@
+---
+interface Props {
+	name: string;
+	image: string;
+}
+
+const { name, image } = Astro.props;
+---
+
+<li class="link-card">
+  <h3>
+    {name}
+  </h3>
+  <!-- <img src={`/images/${image}`} alt={name} />	 -->
+  <img src={`/images/tiny/${image}`} alt={name} />	
+  
+</li>
+
+<style>
+	.link-card {
+    list-style: none;
+		display: flex;
+		background-color: #23262d;
+    aspect-ratio: 1;
+    position: relative;
+	}
+  
+  .link-card:hover img {
+    opacity: 1;
+  }
+
+  img {
+    width: 100%;
+    opacity:0.9;
+    z-index: 10;
+  }
+
+  h3 {
+    position:absolute;
+    bottom: 1em;
+    left: 1em;
+    padding: 0;
+    margin:0;
+    z-index: 20;
+  }
+  
+</style>

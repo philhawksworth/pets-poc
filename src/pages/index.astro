@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pet from '../components/Pet.astro';
+import petData from '../data/pets.json';
+
+function compareName(a, b) {
+  return a.name.localeCompare(b.name);
+}
+const pets = petData.sort(compareName);
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+
+
+    <h2>Pets</h2>
+      <ul role="list" class="link-card-grid">
+      {pets.map((item) => (
+        <Pet
+          name={item.name}
+          image={item.photo}
+        />
+      ))}
+    </ul>
+
+
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1px;;
+		padding: 0;
+	}
+</style>

@@ -1,0 +1,13 @@
+[build] 
+  publish = "dist"
+  command = "npm run build"
+
+[dev] 
+  publish = "dist"
+  command = "npm run dev"
+
+[[redirects]]
+  from = "/image/tiny/*"
+  to = "/.netlify/images/?w=50&url=:splat"
+  status = 200
+
