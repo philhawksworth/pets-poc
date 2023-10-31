@@ -17,23 +17,28 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-    <header>
-      <h1>Pets of Netlify</h1>
-    </header>
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-
+    --text-color: #fff;
+    --page-color: #222;
+    --accent-color: #00ffd9;
+    --blur-radius: 20px;
 	}
+
+  ::selection {
+  background-color: var(--accent-color);
+  color: var(--page-color);
+}
+
+
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: var(--page-color);
 		background-size: 224px;
+    color:  var(--text-color);
 	}
 	code {
 		font-family:
