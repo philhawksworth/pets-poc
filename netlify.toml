@@ -11,22 +11,22 @@
 
 [[redirects]]
   from = "/images/tiny/*"
-  to = "https://pets-poc.netlify.app/.netlify/images/?w=10&h=10&fit=crop&url=images/:splat"
+  to = "https://pets-poc.netlify.app/.netlify/images/?w=10&h=10&fit=crop&url=/images/:splat"
   status = 200
 
 [[redirects]]
   from = "/images/small/*"
-  to = "https://pets-poc.netlify.app/.netlify/images/?w=500&h=500&fit=crop&url=images/:splat"
+  to = "https://pets-poc.netlify.app/.netlify/images/?w=500&h=500&fit=crop&url=/images/:splat"
   status = 200
 
 [[redirects]]
   from = "/images/medium/*"
-  to = "https://pets-poc.netlify.app/.netlify/images/?w=600&h=600&fit=crop&url=images/:splat"
+  to = "https://pets-poc.netlify.app/.netlify/images/?w=600&h=600&fit=crop&url=/images/:splat"
   status = 200
 
 [[redirects]]
   from = "/images/large/*"
-  to = "https://pets-poc.netlify.app/.netlify/images/?w=700&h=700&fit=crop&url=images/:splat"
+  to = "https://pets-poc.netlify.app/.netlify/images/?w=700&h=700&fit=crop&url=/images/:splat"
   status = 200
 
 [[redirects]]
