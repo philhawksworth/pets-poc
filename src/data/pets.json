@@ -21,7 +21,8 @@
   },
   {
     "name": "Gypsy",
-    "photo": "gypsy.jpg"
+    "photo": "gypsy.jpg",
+    "alumn": true
   },
   {
     "name": "Angel",
@@ -37,7 +38,8 @@
   },
   {
     "name": "Monty and Petunia",
-    "photo": "petuna-jessica.jpg"
+    "photo": "petuna-jessica.jpg",
+    "alumn": true
   },
   {
     "name": "Nyanyu",
@@ -49,7 +51,8 @@
   },
   {
     "name": "Zooey",
-    "photo": "zooey-rafa.jpg"
+    "photo": "zooey-rafa.jpg",
+    "alumn": true
   },
   {
     "name": "Sundance",
@@ -57,7 +60,8 @@
   },
   {
     "name": "Roxy",
-    "photo": "mike.jpg"
+    "photo": "mike.jpg",
+    "alumn": true
   },
   {
     "name": "Wash and Fry",
@@ -65,7 +69,8 @@
   },
   {
     "name": "Macchiato",
-    "photo": "macchiato.jpg"
+    "photo": "macchiato.jpg",
+    "alumn": true
   },
   {
     "name": "Polly",
@@ -73,11 +78,13 @@
   },
   {
     "name": "Beam",
-    "photo": "beam.jpg"
+    "photo": "beam.jpg",
+    "alumn": true
   },
   {
     "name": "Sudo",
-    "photo": "sudo.jpg"
+    "photo": "sudo.jpg",
+    "alumn": true
   },
   {
     "name": "Lily",
@@ -117,7 +124,8 @@
   },
   {
     "name": "Guff",
-    "photo": "guff-laurie.jpg"
+    "photo": "guff-laurie.jpg",
+    "alumn": true
   },
   {
     "name": "Ollie",
@@ -137,7 +145,8 @@
   },
   {
     "name": "Pixel",
-    "photo": "pixel-drew.jpg"
+    "photo": "pixel-drew.jpg",
+    "alumn": true
   },
   {
     "name": "Rosi & Miguelito",
@@ -234,10 +243,6 @@
   {
     "name": "Mabel",
     "photo": "mabel.jpg"
-  },
-  {
-    "name": "Purrfect.dev - AJ with Headphones",
-    "photo": "purrfect.png"
   },
   {
     "name": "Loki",

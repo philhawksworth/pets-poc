@@ -2,9 +2,10 @@
 interface Props {
 	name: string;
 	image: string;
+	index: number;
 }
 
-const { name, image } = Astro.props;
+const { name, image, index } = Astro.props;
 ---
 
 <li class="link-card">
@@ -13,13 +14,20 @@ const { name, image } = Astro.props;
       {name}
     </h3>
   </div>
+
+  {index && index<7 ?
+  <picture>
+    <source srcset={`/images/large/${image}`} media="(min-width: 1200px)">
+    <source srcset={`/images/medium/${image}`} media="(min-width: 740px)">
+    <img src={`/images/small/${image}`} alt={name} />
+  </picture>    
+  :    
   <picture class="lazy lazy-initial">
     <source srcset={`/images/tiny/${image}`} media="(min-width: 1200px)">
     <source srcset={`/images/tiny/${image}`} media="(min-width: 740px)">
     <img src={`/images/tiny/${image}`} alt={name} />
-  </picture>
-  
-  
+    </picture>
+  }
 </li>
 
 <style>
@@ -28,7 +36,7 @@ const { name, image } = Astro.props;
 		display: flex;
     aspect-ratio: 1;
     position: relative;
-    transition: 0.1s all linear;
+    transition: var(--animation-duration) all linear;
 	}
 
   .link-card:hover {
@@ -52,7 +60,7 @@ const { name, image } = Astro.props;
   }
   picture img {
     -webkit-transition: 0.5s -webkit-filter ease;
-    -o-transition: 0.5s -o-filter ease;
+    -o-transition: 0.5s -webkit-filter ease;
     filter: blur(0);
   }
   
@@ -64,14 +72,47 @@ const { name, image } = Astro.props;
 
  .details {
    position:absolute;
-   bottom: 1em;
-   left: 1em;
+   bottom: 0;
+   left: 0;
    z-index: 20;
-   /* background-color: rgba(0,0,0,0.5); */
-   
+  //  background-color: rgba(0,0,0,0.2);
+  //  display:block;
+  //  width: 100%;
+  //  padding-left: 1rem;
+  //  padding-top: 1rem;
+  //  padding-bottom: 1rem;
+  //  transition: all var(--animation-duration) ease;
+
+}
+.details h3 {
+  padding: 1rem;
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
+}
+
+
+  button {
+    border: none;
+    border-radius: 3px;
+    background-color: var(--text-color);
+    color: var(--page-color);
+    font-size: 0.9rem;
+    margin-right:0.5rem;
   }
-  
-  h3 {
+  button:hover {
+    background-color: var(--page-color);
+    color: var(--text-color); 
+  }
+  button:active {
+    background-color: var(--accent-color);
+    color: var(--page-color); 
+  }
+
+  .pats {
+    font-size:0.8rem;
+  }
+
+
+  p,h3 {
     padding: 0;
     margin:0;
   }

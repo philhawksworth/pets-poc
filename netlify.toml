@@ -33,3 +33,4 @@
   from = "/images/original/*"
   to = "https://pets-poc.netlify.app/.netlify/images/:splat"
   status = 200
+  
